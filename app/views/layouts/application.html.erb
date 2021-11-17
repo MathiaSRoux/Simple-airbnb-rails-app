@@ -3,6 +3,7 @@
   <head>
     <title>RailsSimpleAirbnb</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -11,6 +12,14 @@
   </head>
 
   <body>
+  <div class="header">
+    <h1>Flats finder</h1>
+    <%= simple_form_for @flat do |f| %>
+      <%= f.input :name, label: false %>
+      <%= f.submit "Search", class: "btn btn-success" %>
+    <% end %>
+    <button class="btn btn-primary"></button>
+  </div>
     <%= yield %>
   </body>
 </html>
