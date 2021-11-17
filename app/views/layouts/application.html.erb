@@ -12,14 +12,12 @@
   </head>
 
   <body>
-  <div class="header">
-    <h1>Flats finder</h1>
-    <%= simple_form_for @flat do |f| %>
-      <%= f.input :name, label: false %>
-      <%= f.submit "Search", class: "btn btn-success" %>
-    <% end %>
-    <button class="btn btn-primary"></button>
-  </div>
-    <%= yield %>
+    <div class="header">
+      <h1>Flats finder</h1>
+      <%= link_to 'Add a flat', new_flat_path, class: "btn btn-primary" %>
+    </div>
+    <div class="container">
+      <%= yield %>
+    </div>
   </body>
 </html>

@@ -1,6 +1,19 @@
 <h1>All flats!</h1>
 <ul>
   <% @flats.each do |flat| %>
-    <li><%= link_to flat.name, flat_path(flat)%></li>
+    <li>
+      <div class="card-trip">
+        <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
+        <div class="card-trip-infos">
+      <div>
+        <h2> <%= link_to flat.name, flat_path(flat) %> </h2>
+        <p><%= flat.description %></p>
+      </div>
+      <h2 class="card-trip-pricing"><i class="fas fa-pound-sign"></i><%= flat.price_per_night %></h2>
+      <h2 class="card-trip-capacity"><%= flat.number_of_guests %></h2>
+      <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
+    </div>
+  </div>
+    </li>
   <% end %>
 </ul>
